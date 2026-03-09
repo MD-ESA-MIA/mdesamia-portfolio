@@ -1,0 +1,69 @@
+/* Chatbot specific scrollbar rules */
+.scrollbar-thin::-webkit-scrollbar {
+    width: 4px;
+}
+
+.scrollbar-thin::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.scrollbar-thin::-webkit-scrollbar-thumb {
+    background-color: rgba(139, 92, 246, 0.3);
+    border-radius: 10px;
+}
+
+.scrollbar-thin::-webkit-scrollbar-thumb:hover {
+    background-color: rgba(139, 92, 246, 0.5);
+}
+
+/* Typing Indicator Animation */
+.typing-indicator span {
+    display: inline-block;
+    width: 5px;
+    height: 5px;
+    background-color: #a78bfa;
+    border-radius: 50%;
+    margin: 0 1px;
+    animation: typing 1.4s infinite ease-in-out;
+}
+
+.typing-indicator span:nth-child(1) {
+    animation-delay: 0s;
+}
+
+.typing-indicator span:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.typing-indicator span:nth-child(3) {
+    animation-delay: 0.4s;
+}
+
+@keyframes typing {
+    0%, 100% {
+        transform: translateY(0);
+        opacity: 0.5;
+    }
+    50% {
+        transform: translateY(-3px);
+        opacity: 1;
+    }
+}
+
+/* Chat window active state classes parsed by JS */
+#chat-window.active {
+    opacity: 1;
+    transform: scale(1);
+    pointer-events: auto;
+}
+
+/* markdown link styling inside bot text */
+.bot-link {
+    color: #a78bfa;
+    text-decoration: underline;
+    text-decoration-color: rgba(167, 139, 250, 0.3);
+    text-underline-offset: 2px;
+}
+.bot-link:hover {
+    color: #c4b5fd;
+}

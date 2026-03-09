@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Md. Esa Mia – Frontend Developer Resume</title>
+<link rel="icon" type="image/x-icon" href="assets/favicon_pack/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="assets/favicon_pack/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon_pack/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="48x48" href="assets/favicon_pack/favicon-48x48.png">
+<link rel="icon" type="image/png" sizes="64x64" href="assets/favicon_pack/favicon-64x64.png">
+<link rel="icon" type="image/png" sizes="180x180" href="assets/favicon_pack/favicon-180x180.png">
+<link rel="apple-touch-icon" sizes="180x180" href="assets/favicon_pack/favicon-180x180.png">
+<link rel="icon" type="image/png" sizes="512x512" href="assets/favicon_pack/favicon-512x512.png">
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --ink: #0F172A;
+    --ink2: #334155;
+    --ink3: #64748B;
+    --blue: #1D4ED8;
+    --blue-light: #DBEAFE;
+    --line: #CBD5E1;
+    --bg: #FFFFFF;
+    --accent-bar: #1D4ED8;
+  }
+
+  body {
+    font-family: 'DM Sans', sans-serif;
+    background: #EEF2F7;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+    padding: 32px 16px;
+  }
+
+  .page {
+    width: 794px;
+    background: linear-gradient(to right, #0F172A 248px, #FFFFFF 248px);
+    box-shadow: 0 8px 40px rgba(15,23,42,0.14);
+    display: grid;
+    grid-template-columns: 248px 1fr;
+    position: relative;
+    overflow: hidden;
+  }
+
+  /* ── LEFT SIDEBAR ── */
+  .sidebar {
+    padding: 44px 28px 36px;
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    position: relative;
+  }
+
+  .sidebar::after {
+    content: '';
+    position: absolute;
+    top: 0; right: -1px;
+    width: 2px; height: 100%;
+    background: var(--blue);
+  }
+
+  .name-block { margin-bottom: 6px; }
+
+  .name {
+    font-family: 'DM Serif Display', serif;
+    font-size: 26px;
+    color: #FFFFFF;
+    line-height: 1.15;
+    letter-spacing: -0.3px;
+  }
+
+  .title {
+    font-size: 11px;
+    font-weight: 500;
+    color: #93C5FD;
+    letter-spacing: 1.8px;
+    text-transform: uppercase;
+    margin-top: 6px;
+    margin-bottom: 24px;
+  }
+
+  .contact-block { margin-bottom: 28px; }
+
+  .contact-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 9px;
+    margin-bottom: 10px;
+  }
+
+  .contact-icon {
+    width: 16px;
+    height: 16px;
+    flex-shrink: 0;
+    margin-top: 1px;
+    opacity: 0.7;
+  }
+
+  .contact-text {
+    font-size: 10.5px;
+    color: #CBD5E1;
+    line-height: 1.45;
+    word-break: break-all;
+  }
+
+  .contact-text a { color: #93C5FD; text-decoration: none; }
+
+  .s-section { margin-bottom: 24px; }
+
+  .s-label {
+    font-size: 9px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--blue);
+    border-bottom: 1px solid #1E3A6E;
+    padding-bottom: 6px;
+    margin-bottom: 14px;
+  }
+
+  .skill-group { margin-bottom: 12px; }
+
+  .skill-cat {
+    font-size: 9.5px;
+    font-weight: 600;
+    color: #94A3B8;
+    letter-spacing: 0.8px;
+    text-transform: uppercase;
+    margin-bottom: 6px;
+  }
+
+  .skill-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+  }
+
+  .tag {
+    background: #1E293B;
+    border: 1px solid #334155;
+    color: #CBD5E1;
+    font-size: 9.5px;
+    padding: 3px 8px;
+    border-radius: 3px;
+    font-weight: 400;
+    line-height: 1.4;
+  }
+
+  .strength-item {
+    font-size: 10px;
+    color: #CBD5E1;
+    padding: 5px 0;
+    border-bottom: 1px solid #1E293B;
+    display: flex;
+    align-items: center;
+    gap: 7px;
+  }
+  .strength-item::before {
+    content: '';
+    width: 4px; height: 4px;
+    background: var(--blue);
+    border-radius: 50%;
+    flex-shrink: 0;
+  }
+
+  /* ── RIGHT MAIN ── */
+  .main {
+    padding: 44px 36px 36px 36px;
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .section { margin-bottom: 22px; }
+
+  .section-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 12px;
+  }
+
+  .section-title {
+    font-size: 9.5px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--blue);
+  }
+
+  .section-line {
+    flex: 1;
+    height: 1px;
+    background: var(--line);
+  }
+
+  /* Summary */
+  .summary-text {
+    font-size: 10.5px;
+    color: var(--ink2);
+    line-height: 1.7;
+    font-weight: 400;
+  }
+
+  /* Projects */
+  .project { margin-bottom: 14px; }
+  .project:last-child { margin-bottom: 0; }
+
+  .project-header {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    margin-bottom: 4px;
+  }
+
+  .project-name {
+    font-family: 'DM Serif Display', serif;
+    font-size: 13.5px;
+    color: var(--ink);
+    line-height: 1.2;
+  }
+
+  .project-tech {
+    font-size: 9px;
+    font-weight: 500;
+    color: var(--blue);
+    background: var(--blue-light);
+    padding: 2px 8px;
+    border-radius: 20px;
+    white-space: nowrap;
+    margin-left: 8px;
+    flex-shrink: 0;
+  }
+
+  .project-desc {
+    font-size: 10px;
+    color: var(--ink3);
+    line-height: 1.6;
+  }
+
+  /* Experience */
+  .exp-item { margin-bottom: 14px; }
+  .exp-item:last-child { margin-bottom: 0; }
+
+  .exp-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 3px;
+  }
+
+  .exp-role {
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--ink);
+  }
+
+  .exp-duration {
+    font-size: 9px;
+    color: var(--ink3);
+    font-weight: 400;
+    font-style: italic;
+  }
+
+  .exp-company {
+    font-size: 10px;
+    color: var(--blue);
+    font-weight: 500;
+    margin-bottom: 4px;
+  }
+
+  .exp-desc {
+    font-size: 10px;
+    color: var(--ink3);
+    line-height: 1.6;
+    padding-left: 10px;
+    border-left: 2px solid var(--blue-light);
+  }
+
+  /* Education */
+  .edu-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 8px 0;
+    border-bottom: 1px solid #F1F5F9;
+  }
+  .edu-item:last-child { border-bottom: none; }
+
+  .edu-degree {
+    font-size: 11px;
+    font-weight: 600;
+    color: var(--ink);
+    margin-bottom: 2px;
+  }
+
+  .edu-school {
+    font-size: 10px;
+    color: var(--ink3);
+  }
+
+  /* Decorative top bar */
+  .top-bar {
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, #1D4ED8 0%, #60A5FA 60%, #1D4ED8 100%);
+    grid-column: 1 / -1;
+    z-index: 10;
+  }
+
+  @media print {
+    body { background: white; padding: 0; }
+    .page { box-shadow: none; width: 100%; }
+  }
+</style>
+</head>
+<body>
+<div class="page">
+  <div class="top-bar" style="position:absolute;top:0;left:0;right:0;height:4px;background:linear-gradient(90deg,#1D4ED8,#60A5FA,#1D4ED8);z-index:10;grid-column:unset;"></div>
+
+  <!-- SIDEBAR -->
+  <aside class="sidebar" style="padding-top:52px;">
+
+    <div class="name-block">
+      <div class="name">MD. ESA MIA</div>
+      <div class="title">Aspiring Frontend Dev</div>
+    </div>
+
+    <div class="contact-block">
+      <!-- Location -->
+      <div class="contact-item">
+        <svg class="contact-icon" viewBox="0 0 24 24" fill="none" stroke="#93C5FD" stroke-width="2"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/><circle cx="12" cy="9" r="2.5"/></svg>
+        <span class="contact-text">Dhaka, Bangladesh</span>
+      </div>
+      <!-- Email -->
+      <div class="contact-item">
+        <svg class="contact-icon" viewBox="0 0 24 24" fill="none" stroke="#93C5FD" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m2 7 10 7 10-7"/></svg>
+        <span class="contact-text">mdesamia47@gmail.com</span>
+      </div>
+      <!-- Portfolio -->
+      <div class="contact-item">
+        <svg class="contact-icon" viewBox="0 0 24 24" fill="none" stroke="#93C5FD" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+        <span class="contact-text"><a href="https://mdesamia.pro.bd">mdesamia.pro.bd</a></span>
+      </div>
+      <!-- GitHub -->
+      <div class="contact-item">
+        <svg class="contact-icon" viewBox="0 0 24 24" fill="#93C5FD"><path d="M12 2C6.477 2 2 6.477 2 12c0 4.42 2.865 8.17 6.839 9.49.5.092.682-.217.682-.482 0-.237-.008-.866-.013-1.7-2.782.604-3.369-1.34-3.369-1.34-.454-1.156-1.11-1.464-1.11-1.464-.908-.62.069-.608.069-.608 1.003.07 1.531 1.03 1.531 1.03.892 1.529 2.341 1.087 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.11-4.555-4.943 0-1.091.39-1.984 1.029-2.683-.103-.253-.446-1.27.098-2.647 0 0 .84-.269 2.75 1.025A9.578 9.578 0 0 1 12 6.836c.85.004 1.705.114 2.504.336 1.909-1.294 2.747-1.025 2.747-1.025.546 1.377.203 2.394.1 2.647.64.699 1.028 1.592 1.028 2.683 0 3.842-2.339 4.687-4.566 4.935.359.309.678.919.678 1.852 0 1.336-.012 2.415-.012 2.743 0 .267.18.578.688.48C19.138 20.167 22 16.418 22 12c0-5.523-4.477-10-10-10z"/></svg>
+        <span class="contact-text"><a href="https://github.com/MD-ESA-MIA">github.com/MD-ESA-MIA</a></span>
+      </div>
+    </div>
+
+    <!-- Skills -->
+    <div class="s-section">
+      <div class="s-label">Technical Skills</div>
+
+      <div class="skill-group">
+        <div class="skill-cat">Frontend</div>
+        <div class="skill-tags">
+          <span class="tag">HTML5</span><span class="tag">CSS3</span><span class="tag">JavaScript</span>
+          <span class="tag">React.js</span><span class="tag">Tailwind CSS</span><span class="tag">Bootstrap</span>
+        </div>
+      </div>
+
+      <div class="skill-group">
+        <div class="skill-cat">Backend</div>
+        <div class="skill-tags">
+          <span class="tag">Node.js</span><span class="tag">Express.js</span>
+        </div>
+      </div>
+
+      <div class="skill-group">
+        <div class="skill-cat">Database</div>
+        <div class="skill-tags">
+          <span class="tag">MongoDB</span><span class="tag">PostgreSQL</span>
+        </div>
+      </div>
+
+      <div class="skill-group">
+        <div class="skill-cat">Tools</div>
+        <div class="skill-tags">
+          <span class="tag">Git</span><span class="tag">GitHub</span><span class="tag">VS Code</span>
+          <span class="tag">Postman</span><span class="tag">Figma</span><span class="tag">DevTools</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Strengths -->
+    <div class="s-section">
+      <div class="s-label">Strengths</div>
+      <div class="strength-item">Self-motivated learner</div>
+      <div class="strength-item">Strong problem-solver</div>
+      <div class="strength-item">Learns new tech quickly</div>
+      <div class="strength-item">Works independently &amp; in teams</div>
+    </div>
+
+    <!-- Footer note -->
+    <div style="margin-top:28px;padding-top:20px;border-top:1px solid #1E3A6E;">
+      <div style="font-size:9px;color:#475569;text-align:center;letter-spacing:0.5px;line-height:1.6;">
+        Open to remote &amp; on-site<br>opportunities in Dhaka
+      </div>
+    </div>
+
+  </aside>
+
+  <!-- MAIN CONTENT -->
+  <main class="main" style="padding-top:52px;">
+
+    <!-- Summary -->
+    <div class="section">
+      <div class="section-header">
+        <span class="section-title">Profile</span>
+        <div class="section-line"></div>
+      </div>
+      <p class="summary-text">
+        Aspiring Frontend Developer passionate about building modern, responsive web applications and interactive user interfaces. Skilled in JavaScript, React, and Tailwind CSS with hands-on experience developing real-world projects — including an AI story generator platform and a password security application. Focused on writing clean code and solving real problems through thoughtful web development.
+      </p>
+    </div>
+
+    <!-- Projects -->
+    <div class="section">
+      <div class="section-header">
+        <span class="section-title">Projects</span>
+        <div class="section-line"></div>
+      </div>
+
+      <div class="project">
+        <div class="project-header">
+          <span class="project-name">Neotoons</span>
+          <span class="project-tech">React · JavaScript · Tailwind CSS</span>
+        </div>
+        <div style="font-size:10px;color:#1D4ED8;font-weight:500;margin-bottom:4px;">AI Story Generator &amp; Communication Platform</div>
+        <p class="project-desc">A modern web platform where users can generate creative stories using AI and communicate with others. Focused on interactive content creation with a smooth, responsive UI and clean component architecture.</p>
+      </div>
+
+      <div class="project">
+        <div class="project-header">
+          <span class="project-name">Keywiggle</span>
+          <span class="project-tech">React · Node.js · MongoDB</span>
+        </div>
+        <div style="font-size:10px;color:#1D4ED8;font-weight:500;margin-bottom:4px;">Password Generator &amp; Secure Storage</div>
+        <p class="project-desc">A web application for generating strong passwords and securely storing user credentials. Built with a user-friendly, security-focused interface emphasising clarity and ease of use.</p>
+      </div>
+    </div>
+
+    <!-- Experience -->
+    <div class="section">
+      <div class="section-header">
+        <span class="section-title">Experience</span>
+        <div class="section-line"></div>
+      </div>
+
+      <div class="exp-item">
+        <div class="exp-header">
+          <span class="exp-role">Junior Executive</span>
+          <span class="exp-duration">6 Months</span>
+        </div>
+        <div class="exp-company">Faiza Express</div>
+        <div class="exp-desc">Improved workflow efficiency through process optimisation; coordinated operational tasks and communication across cross-functional teams.</div>
+      </div>
+
+      <div class="exp-item">
+        <div class="exp-header">
+          <span class="exp-role">Engineer Assistant</span>
+          <span class="exp-duration">6 Months</span>
+        </div>
+        <div class="exp-company">Pharmaceutical Industry</div>
+        <div class="exp-desc">Assisted technical teams with testing, documentation, and compliance reporting; helped troubleshoot issues and maintained detailed operational records.</div>
+      </div>
+    </div>
+
+    <!-- Education -->
+    <div class="section">
+      <div class="section-header">
+        <span class="section-title">Education</span>
+        <div class="section-line"></div>
+      </div>
+
+      <div class="edu-item">
+        <div>
+          <div class="edu-degree">Higher Secondary Certificate (HSC)</div>
+          <div class="edu-school">Govt Bangla College, Dhaka</div>
+        </div>
+        <div style="font-size:10px;color:#94A3B8;font-style:italic;">2023 – 2024</div>
+      </div>
+
+      <div class="edu-item">
+        <div>
+          <div class="edu-degree">Secondary School Certificate (SSC)</div>
+          <div class="edu-school">Chiriakhana Botanical High School</div>
+        </div>
+        <div style="font-size:10px;color:#94A3B8;font-style:italic;">2023</div>
+      </div>
+    </div>
+
+  </main>
+</div>
+</body>
+</html>
