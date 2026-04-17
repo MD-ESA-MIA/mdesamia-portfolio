@@ -46,10 +46,6 @@ Smart all-in-one calculator app with:
 
 ---
 
-## 📸 Preview
-
-(Add screenshots here)
-
 ---
 
 ## 📬 Contact Me
